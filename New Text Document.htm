@@ -1,0 +1,127 @@
+﻿<!DOCTYPE thml>
+<html> 
+<head>
+  <title>Oldalcím</title>
+  <style>
+	@import url('https://fonts.googleapis.com/css?family=Work+Sans:300&subset=latin-ext');
+  html, body {
+     //border: 1px solid red; // border keret(1 vastagságu piros)
+    width: 100%;
+    height: 100%;
+    margin: 0; // margo (hogy a keret normalis legyen)
+	font-family: Arial;
+	color: white;
+	font-size: 20px;
+  }
+	.pirosvonal {
+	 border: 1px solid red; // border keret(1 vastagságu piros) egész sor 
+	}
+	.hatter {
+	 background-image: url("hatter.jpg");
+	 background-size: cover;
+	 width: 100%;
+	 height: 100%;
+	 position: fixed;
+	}
+	.fuggkozep {
+	 position: absolute;
+	 top: 50%;	
+	 transform: translate(0,-50%);
+	}
+	.vizkozep {
+	 position: absolute;
+	 left: 50%;	
+	 transform: translate(-50%,0);
+	 
+	}
+ 	.totalkozep {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;	
+	 transform: translate(-50%,-50%);
+	 margin-right: -50%;
+	}
+	.alja {
+	 bottom: 0;
+	}
+	.teteje {
+	 top: 0;
+	}
+	.cim {
+	font-size: 50px;
+	font-family: 'Work Sans', Arial;
+	text-align: center;
+	color: white
+	
+	}
+  	a {
+	 text-decoration: none;
+	 color: white;
+ 	}
+	.fejleclink {
+	 margin: 0 10px;
+	}
+	.gomb {
+	 background-color: rgba(0, 0, 0, 0.5);
+	 padding: 10px 20px;
+	 margin: 10px;
+	 width: 100px;
+	 border: 1px solid grey;
+	 display: inline-block;	
+	 text-align: center;
+	 font-size: 16px;
+	}
+	.gomb:hover {
+	 filter: invert(100%);
+	}
+	.azanyadkozep {
+	 margin-left: auto;
+ 	 margin-right: auto;
+	}
+.fullscreen-bg__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+    .fullscreen-bg {
+        background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;
+    }
+
+    .fullscreen-bg__video {
+        display: none;
+    }
+}
+  </style>
+</head>
+<body>
+<div class=" hatter">
+ <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+
+        <source src="video.mp4">
+
+    </video>
+</div> 
+<div class="vizkozep teteje">Fejléc
+<a href="http://disney.com" class="fejleclink">Disney</a>
+<a href="http://index.hu" class="fejleclink">Index</a>
+</div>
+<div class=" totalkozep"><div class="cim">Szép az élet!</div>
+<div class="azanyadkozep">
+<a href="http://disney.com"><div class="gomb">Disney</div></a>
+<a href="http://index.hu"><div class="gomb">Index</div></a>
+</div>
+
+</div>
+<div class="vizkozep alja">Lábléc</div>
+</body>
+</html>
